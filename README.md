@@ -1,3 +1,1 @@
-latinotrading
-=============
 # component-ADM-template
