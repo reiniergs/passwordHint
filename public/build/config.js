@@ -1,0 +1,5 @@
+({
+    paths : {
+        'backbone' : 'vendor/backbone'
+    }
+})
