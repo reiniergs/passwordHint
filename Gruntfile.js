@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
 
     grunt.initConfig({
-        
+        pkg: grunt.file.readJSON('package.json'),
         watch: {
             js : {
                 files: ['asset/js/src/**/*.js'],
@@ -28,12 +28,12 @@ module.exports = function(grunt) {
         browserify : {
             dev : {
                 files : {
-                    'asset/js/build/component.js' : 'asset/js/src/**/*.js'
+                    'asset/js/build/<%= pkg.name %>.js' : 'asset/js/src/**/*.js'
                 },
                 options : {
                     browserifyOptions : {
                         debug : true,
-                        standalone : 'passwordHint'
+                        standalone : '<%= pkg.name %>'
                     }
                 }
             }
@@ -42,10 +42,10 @@ module.exports = function(grunt) {
             my_target: {
                 options: {
                     sourceMap: true,
-                    sourceMapName: 'dist/sourcemap.map'
+                    sourceMapName: 'dist/<%= pkg.name %>.map'
                 },
                 files: {
-                    'dist/component.min.js': ['asset/js/build/component.js']
+                    'dist/<%= pkg.name %>.min.js': ['asset/js/build/<%= pkg.name %>.js']
                 }
             }
         }

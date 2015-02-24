@@ -4,7 +4,7 @@ var $ = require('jquery');
 		this.el = element;
 		this.parent = $(element).parent();  
 		$(window).resize(function () {
-			this.setPosition();  
+			this.setPosition();   
 		}.bind(this));
 		this.render(); 
 	}

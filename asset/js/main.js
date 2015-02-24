@@ -1,3 +1,3 @@
-define(['dist/component.min.js'],function (passwordHint) {
-    passwordHint.init('.pass');
+define(['dist/passwordHint.min.js'],function (passwordHint) {
+    passwordHint.init('.pass'); 
 });

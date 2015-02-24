@@ -1,5 +1,5 @@
 {
-  "name": "PasswordHint component",
+  "name": "PasswordHint",
   "version": "0.0.1",
   "description": "",
   "main": "./bin/www",
