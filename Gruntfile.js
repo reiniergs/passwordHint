@@ -6,11 +6,11 @@ module.exports = function(grunt) {
         
         watch: {
             js : {
-                files: ['public/js/src/**/*.js'],
-                tasks: ['requirejs']
+                files: ['asset/js/src/**/*.js'],
+                tasks: ['browserify']
             }, 
             css: {
-                files: 'public/css/src/**/*.scss',
+                files: 'asset/css/src/**/*.scss',
                 tasks: ['compass'],
                 options: {
                   livereload: true
@@ -20,50 +20,30 @@ module.exports = function(grunt) {
         compass: {                 
             dev: {                    
                 options: {
-                  sassDir: 'public/css/src',
-                  cssDir:  'public/css'
+                  sassDir: 'asset/css/src',
+                  cssDir:  'asset/css'
                 }
             }
         },
         browserify : {
             dist : {
                 files : {
-                    'public/js/main.js' : 'public/js/src/**/*.js'
+                    'asset/js/build/component.js' : 'asset/js/src/**/*.js'
                 },
                 options : {
                     browserifyOptions : {
                         debug : true,
+                        standalone : 'passwordHint'
                     }
                 }
             }
-        },
-        requirejs: {
-		    compile: {
-			    options: {
-			    	appDir: './public/js',
-			    	baseUrl : './',
-			        dir : "public/build",
-			        modules: [
-				        { name: 'init' },
-				    ],
-				    paths : {
-				    	'backbone' : 'vendor/backbone',
-				    	'underscore' : 'vendor/underscore',
-				    	'jquery' : 'vendor/jquery',
-				    	'text'	: 'vendor/text',
-				    	'handlebars' : 'vendor/handlebars'
-				    }
-			    }
-		    }
-		}
+        }
     });
 
     
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-browserify');
-    grunt.loadNpmTasks("grunt-amd-wrap");
-    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('deploy', ['requirejs']);
