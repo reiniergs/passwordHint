@@ -1,5 +1,5 @@
 {
-  "name": "PasswordHint",
+  "name": "passwordHint",
   "version": "0.0.1",
   "description": "",
   "main": "./bin/www",
