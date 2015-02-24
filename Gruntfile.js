@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         watch: {
             js : {
                 files: ['asset/js/src/**/*.js'],
-                tasks: ['browserify']
+                tasks: ['browserify','uglify']
             }, 
             css: {
                 files: 'asset/css/src/**/*.scss',
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
             }
         },
         browserify : {
-            dist : {
+            dev : {
                 files : {
                     'asset/js/build/component.js' : 'asset/js/src/**/*.js'
                 },
@@ -37,6 +37,17 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+        uglify: {
+            my_target: {
+                options: {
+                    sourceMap: true,
+                    sourceMapName: 'dist/sourcemap.map'
+                },
+                files: {
+                    'dist/component.min.js': ['asset/js/build/component.js']
+                }
+            }
         }
     });
 
@@ -44,9 +55,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('deploy', ['requirejs']);
+    
 
     
     

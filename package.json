@@ -34,12 +34,21 @@
   "browserify": {
     "transform": [
       "browserify-shim",
-      [ "txtify2", { "extensions": [ "hbs" ] } ]
+      [
+        "txtify2",
+        {
+          "extensions": [
+            "hbs"
+          ]
+        }
+      ]
     ]
   },
   "devDependencies": {
+    "grunt-contrib-uglify": "^0.8.0",
     "handlebars": "^3.0.0",
-    "txtify2": "^2.0.0"
+    "txtify2": "^2.0.0",
+    "uglifyify": "^3.0.1"
   },
   "scripts": {
     "test": "npm test"

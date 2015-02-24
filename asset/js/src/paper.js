@@ -2,11 +2,11 @@ var $ = require('jquery');
 
 	var Paper = function (element) {
 		this.el = element;
-		this.parent = $(element).parent();
+		this.parent = $(element).parent();  
 		$(window).resize(function () {
-			this.setPosition();
+			this.setPosition();  
 		}.bind(this));
-		this.render();
+		this.render(); 
 	}
 
 	Paper.prototype.render = function () {
