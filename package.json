@@ -1,7 +1,7 @@
 {
-  "name": "invCloud",
-  "version": "0.0.0",
-  "description": "latinotrading =============",
+  "name": "PasswordHint component",
+  "version": "0.0.1",
+  "description": "",
   "main": "./bin/www",
   "dependencies": {
     "backbone": "^1.1.2",
@@ -13,10 +13,7 @@
     "grunt-browserify": "^3.2.1",
     "grunt-contrib-compass": "^1.0.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-react": "^0.10.0",
-    "jest-cli": "^0.2.1",
     "jquery": "^2.1.3",
-    "react": "^0.12.2",
     "underscore": "^1.7.0"
   },
   "browser": {
@@ -55,12 +52,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/reiniergs/InvCloud.git"
+    "url": "https://github.com/reiniergs/passwordHint.git"
   },
   "author": "Rey",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/reiniergs/InvCloud/issues"
+    "url": "https://github.com/reiniergs/passwordHint/issues"
   },
-  "homepage": "https://github.com/reiniergs/InvCloud"
+  "homepage": "https://reiniergs.github.io/passwordHint"
 }
