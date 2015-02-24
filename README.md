@@ -1,3 +1,3 @@
 # passwordHint component
 
-<a href="reiniergs.github.io/passwordHint">Demo</a>
+<a href="http://reiniergs.github.io/passwordHint">Demo</a>
