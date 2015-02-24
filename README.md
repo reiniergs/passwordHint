@@ -27,5 +27,6 @@
 ```
 <input type="password" data-module="path/to/passwordHint" />
 ```
-
+###CSS easy to change
+[example SASS file](https://github.com/reiniergs/passwordHint/blob/master/asset/css/src/components/_passwordHint.scss)
 
