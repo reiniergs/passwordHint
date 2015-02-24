@@ -23,7 +23,7 @@
     });
 </script> 
 ```
-<h3>revelex data-module</h3>
+<h3>data-module</h3>
 ```
 <input type="password" data-module="path/to/passwordHint" />
 ```
